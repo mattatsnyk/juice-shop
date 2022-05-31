@@ -28,7 +28,6 @@ steps:
 
   - name: Setup Snyk + snyk-to-html # For information about the required commands for generating an HTML report see https://github.com/snyk/snyk-to-html
     run: |
-      #!/bin/sh
 
       VERSION=$(curl https://api.github.com/repos/snyk/cli/releases/latest | jq '.name' | tr -d '"')
       wget https://github.com/snyk/cli/releases/download/$VERSION/snyk-linux.sha256
